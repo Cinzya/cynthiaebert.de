@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Moon 2.0";
+  src: url("/font/Moon2.0-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moon 2.0";
+  src: url("/font/Moon2.0-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$red: #d6004c;
+
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: #f4f2ff;
+    padding: 0;
+    margin: 0;
+
+    .social {
+      color: #f4f2ff;
+    }
+
+    h3 {
+      color: #696969;
+    }
+
+    .container {
+      background-color: #161618;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+}
+
+body {
+  font-family: "Moon 2.0";
+  letter-spacing: 0.1875rem;
+
+  .container {
+    width: 500px;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+
+    #pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-weight: bold;
+      margin: 1.6rem 0 0.4375rem 0;
+    }
+
+    h2 {
+      font-size: 17px;
+      color: $red;
+      margin: 0;
+    }
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .social {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        // flex-basis: 40%;
+        margin: 0 12px;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    #skills__section {
+      text-align: left;
+
+      h3 {
+        margin-top: 70px;
+      }
+
+      .skills {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 200px;
+
+        .skill {
+          margin-top: 8px;
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    #contact__section {
+      margin-top: 90px;
+
+      a {
+        color: #f8f9fa;
+        border: 1px solid transparent;
+        // border-color: #f8f9fa;
+        border-radius: 0.2rem;
+        background-color: $red;
+        padding: 13px 44px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #9c093d;
+        }
+
+        &:active {
+          background-color: #7e002c;
+        }
+      }
+    }
+  }
+}
