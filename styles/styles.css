@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Moon 2.0";
+  src: url("/font/Moon2.0-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moon 2.0";
+  src: url("/font/Moon2.0-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #000000;
+    color: #f4f2ff;
+    padding: 0;
+    margin: 0;
+  }
+  body .social {
+    color: #f4f2ff;
+  }
+  body h3 {
+    color: #696969;
+  }
+  body .container {
+    background-color: #161618;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+}
+
+body {
+  font-family: "Moon 2.0";
+  letter-spacing: 0.1875rem;
+}
+
+body .container {
+  width: 500px;
+  padding: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+body .container #pic {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+body .container h1 {
+  font-weight: bold;
+  margin: 1.6rem 0 0.4375rem 0;
+}
+
+body .container h2 {
+  font-size: 17px;
+  color: #d6004c;
+  margin: 0;
+}
+
+body .container .socials {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .socials .social {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 12px;
+}
+
+body .container .socials .social span {
+  margin-left: 10px;
+}
+
+body .container #skills__section {
+  text-align: left;
+}
+
+body .container #skills__section h3 {
+  margin-top: 70px;
+}
+
+body .container #skills__section .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 200px;
+}
+
+body .container #skills__section .skills .skill {
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container #skills__section .skills .skill span {
+  margin-left: 10px;
+}
+
+body .container #contact__section {
+  margin-top: 90px;
+}
+
+body .container #contact__section a {
+  color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  background-color: #d6004c;
+  padding: 13px 44px;
+  text-decoration: none;
+}
+
+body .container #contact__section a:hover {
+  background-color: #9c093d;
+}
+
+body .container #contact__section a:active {
+  background-color: #7e002c;
+}
+/*# sourceMappingURL=styles.css.map */
