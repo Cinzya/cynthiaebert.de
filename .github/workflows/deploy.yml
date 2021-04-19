@@ -28,7 +28,6 @@ jobs:
         with:
           host: ${{ secrets.HETZNERHOST }}
           username: ${{ secrets.HETZNERUSER }}
-          password: ${{ secrets.HETZNERPW }}
           port: ${{ secrets.HETZNERPORT }}
           key: ${{ secrets.HETZNERSECRET }}
           script: |
