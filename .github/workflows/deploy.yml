@@ -34,5 +34,6 @@ jobs:
             cd public_html
             wget https://github.com/Cinzya/cynthiaebert.de/archive/refs/heads/main.zip
             unzip main.zip
-            rm main.zip README.md
+            mv -v ~/public_html/cynthiaebert.de-main/* .
+            rm main.zip README.md cynthiaebert.de-main
             ls -l
