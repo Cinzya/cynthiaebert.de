@@ -36,5 +36,5 @@ jobs:
             unzip main.zip
             mv -v ~/public_html/cynthiaebert.de-main/* .
             rm main.zip README.md
-            rmdir cynthiaebert.de-main
+            rm -r cynthiaebert.de-main
             ls -l
