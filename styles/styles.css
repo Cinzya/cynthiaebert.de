@@ -141,7 +141,8 @@ body .container #skills__section .skills .skill span {
 }
 
 body .container #contact__section {
-  margin-top: 90px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 body .container #contact__section a {
