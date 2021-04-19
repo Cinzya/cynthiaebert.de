@@ -32,9 +32,8 @@ jobs:
           key: ${{ secrets.HETZNERSECRET }}
           script: |
             cd public_html
+            rm -r cynthiaebert.de-main
             wget https://github.com/Cinzya/cynthiaebert.de/archive/refs/heads/main.zip
             unzip main.zip
-            mv -v ~/public_html/cynthiaebert.de-main/* .
             rm main.zip README.md
-            rm -r cynthiaebert.de-main
             ls -l
