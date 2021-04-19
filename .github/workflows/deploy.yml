@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.HETZNERSECRET }}
           script: |
             cd public_html
-            wget main.zip
+            wget https://github.com/Cinzya/cynthiaebert.de/archive/refs/heads/main.zip
             unzip main.zip
             rm main.zip README.md
             ls -l
