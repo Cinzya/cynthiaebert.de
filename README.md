@@ -1,6 +1,9 @@
+![image](https://user-images.githubusercontent.com/54354036/116753721-d336a980-aa07-11eb-8f3a-8f3f71e2cd81.png)
+
 # cynthiaebert.de
 
 ![Website](https://img.shields.io/website?url=http%3A%2F%2Fcynthiaebert.de%2F) ![URL](https://img.shields.io/badge/URL-http%3A%2F%2Fcynthiaebert.de%2F-D6004C)
+
 This is my source code for my personal webpage, hosted at [Hetzner Online GmbH](https://www.hetzner.com/), holding basic contact information and my skills.
 
 I'm using static HTML pages with self-written CSS compiled from my SASS code for the styling. With some vanilla JavaScript, I look for the users system theme settings to render either the Light or Dark Mode of my page. A toggle button allows the user to switch between those and save it in the users local storage.
