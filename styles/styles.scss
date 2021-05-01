@@ -21,6 +21,10 @@ $body-black: #101315;
     align-items: center;
     height: 100%;
   }
+
+  .container {
+    margin: 0 auto !important;
+  }
 }
 
 .dark-theme {
@@ -81,7 +85,7 @@ body {
   .container {
     border-radius: 5px;
     width: 600px;
-    margin: 0 auto;
+    margin: 18px auto;
     text-align: center;
 
     .switch__wrapper {

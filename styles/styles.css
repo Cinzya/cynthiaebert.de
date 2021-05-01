@@ -19,6 +19,9 @@
             align-items: center;
     height: 100%;
   }
+  .container {
+    margin: 0 auto !important;
+  }
 }
 
 .dark-theme {
@@ -80,7 +83,7 @@ body {
 body .container {
   border-radius: 5px;
   width: 600px;
-  margin: 0 auto;
+  margin: 18px auto;
   text-align: center;
   /* The switch - the box around the slider */
 }
