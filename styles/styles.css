@@ -265,4 +265,43 @@ body .container #contact__section a:hover {
 body .container #contact__section a:active {
   background-color: #7e002c;
 }
+
+@media (max-width: 560px) {
+  body .container {
+    margin: 0;
+  }
+  body .container #skills__section .skills {
+    height: 250px;
+  }
+}
+
+@media (max-width: 410px) {
+  body .container .content__wrapper {
+    padding: 0 0 50px 0;
+  }
+  body .container #skills__section {
+    text-align: center;
+  }
+  body .container #skills__section .skills {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container #skills__section .skills .skill {
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  body .container #skills__section .skills {
+    height: 440px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

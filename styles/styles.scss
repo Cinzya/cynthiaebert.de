@@ -246,3 +246,51 @@ body {
     }
   }
 }
+
+@media (max-width: 560px) {
+  body {
+    .container {
+      margin: 0;
+      #skills__section {
+        .skills {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  body {
+    .container {
+      .content__wrapper {
+        padding: 0 0 50px 0;
+      }
+
+      #skills__section {
+        text-align: center;
+        .skills {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+
+          .skill {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    .container {
+      #skills__section {
+        .skills {
+          height: 440px;
+        }
+      }
+    }
+  }
+}
