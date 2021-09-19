@@ -252,16 +252,23 @@ body {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   body {
     .container {
       margin: 0;
+      background-color: initial;
       #skills__section {
         .skills {
           height: 250px;
         }
       }
     }
+  }
+  .light-theme {
+    background-color: white;
+  }
+  .dark-theme {
+    background-color: $container-black;
   }
 }
 
