@@ -48,6 +48,17 @@
   color: #696969;
 }
 
+.dark-theme footer a {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.dark-theme footer a:hover {
+  color: #f4f2ff;
+}
+
 .light-theme {
   background-color: #f4f6fb;
   color: initial;
@@ -70,6 +81,17 @@
   background-color: white;
 }
 
+.light-theme footer a {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.light-theme footer a:hover {
+  color: #f4f2ff;
+}
+
 body {
   font-family: "Moon 2.0";
   letter-spacing: 0.1875rem;
@@ -78,6 +100,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .container {
