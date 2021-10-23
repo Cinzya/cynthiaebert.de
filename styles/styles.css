@@ -49,14 +49,7 @@
 }
 
 .dark-theme footer a {
-  color: rgba(0, 0, 0, 0.2);
-  font-size: 10px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.dark-theme footer a:hover {
-  color: #f4f2ff;
+  color: rgba(244, 242, 255, 0.2);
 }
 
 .light-theme {
@@ -83,13 +76,6 @@
 
 .light-theme footer a {
   color: rgba(0, 0, 0, 0.8);
-  font-size: 10px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.light-theme footer a:hover {
-  color: #f4f2ff;
 }
 
 body {
@@ -300,7 +286,18 @@ body .container #contact__section a:active {
   background-color: #7e002c;
 }
 
-@media (max-width: 600px) {
+body footer {
+  z-index: 1;
+  text-align: center;
+}
+
+body footer a {
+  font-size: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 560px) {
   body .container {
     margin: 0;
     background-color: initial;
