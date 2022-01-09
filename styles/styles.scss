@@ -273,13 +273,14 @@ body {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   body {
     .container {
       margin: 0;
+      width: 100vw;
       #skills__section {
         .skills {
-          height: 250px;
+          height: 320px;
         }
       }
     }
@@ -314,7 +315,7 @@ body {
     .container {
       #skills__section {
         .skills {
-          height: 440px;
+          height: 600px;
         }
       }
     }
