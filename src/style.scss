@@ -1,0 +1,63 @@
+$ff-primary: 'GeneralSans' , "General Sans", sans-serif;
+
+$ff-body: 'GeneralSans-Regular', "General Sans Regular", sans-serif;
+$ff-heading: 'GeneralSans-Bold', "General Sans Bold", sans-serif;
+$ff-semibold: 'GeneralSans-SemiBold', "General Sans SemiBold", sans-serif;
+
+
+@forward "./sass/reset.scss";
+@forward "./sass/fonts/css/general-sans.css";
+@forward "./sass/sizing.scss";
+@forward "./sass/colors.scss";
+@forward "./sass/layout.scss";
+
+@use "./sass/colors.scss" as color;
+
+:root {
+  font-family: $ff-primary, Inter, Avenir, Helvetica, Arial, sans-serif;
+  // font-size: 16px;
+  // line-height: 24px;
+  // font-weight: 400;
+  // color-scheme: light dark;
+  color: color.$neutral-200;
+  background-color: color.$neutral-800;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+b {
+  font-family: $ff-heading;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+} 
+
+.button {
+  border:  1px solid color.$neutral-200;
+  border-radius: 25px;
+  padding: 1.25rem 1.5625rem;
+}
+
+header {
+  padding-top: 1.875rem;
+  background-color: color.$neutral-800-transparent;
+  nav {
+    a {
+      margin: 0 .7813rem;
+    } 
+  }
+
+  .logo {
+    font-family: $ff-semibold;
+  }
+}
+
+
+
+

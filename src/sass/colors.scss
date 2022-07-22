@@ -1,0 +1,38 @@
+$neutral-800: #1D1D20;
+$neutral-200:#CCCCCC;
+$primary: #74C746;
+$secondary: #4274BF;
+
+$neutral-800-transparent: rgba(29, 29, 32, 0.85);
+
+.color-neutral-800 {
+    color: $neutral-800;
+}
+
+.bg-color-neutral-800 {
+    background-color: $neutral-800;
+}
+
+.color-neutral-200 {
+    color: $neutral-200;
+}
+
+.bg-color-neutral-200 {
+    background-color: $neutral-200;
+}
+
+.color-primary {
+    color: $primary;
+}
+
+.bg-color-primary {
+    background-color: $primary;
+}
+
+.color-secondary {
+    color: $secondary;
+}
+
+.bg-color-secondary {
+    background-color: $secondary;
+}
