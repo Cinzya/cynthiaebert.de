@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { defineEmits } from "vue";
+const emit = defineEmits(["pressed"]);
 
 const menuState = ref(false);
 const menuVisibility = ref();
 function toggleMenu() {
   menuState.value = !menuState.value;
   menuVisibility.value = menuState.value;
+  emit("pressed");
 }
 </script>
 
