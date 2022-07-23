@@ -76,7 +76,6 @@ header {
     #primary-navigation {
       display: flex;
       transition: right 0.3s ease-in-out;
-      display: flex;
       flex-direction: column;
       align-items: flex-end;
       position: fixed;
@@ -89,7 +88,11 @@ header {
       padding-left: 4.313rem;
       background-color: color.$neutral-800;
       z-index: 8;
-      border: 2px solid color.$neutral-200;
+      border-width: 2px;
+      border-style: solid;
+      -webkit-border-image: linear-gradient(to right bottom, color.$primary, color.$secondary) 1;
+      border-image: linear-gradient(to right bottom, color.$primary, color.$secondary) 1;
+
 
       &[data-visible="true"] {
         right: 0;
