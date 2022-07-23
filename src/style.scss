@@ -44,6 +44,9 @@ a {
   padding: 1.25rem 1.5625rem;
 }
 
+
+// Header
+
 header {
   padding-top: 1.875rem;
   background-color: color.$neutral-800-transparent;
@@ -56,6 +59,77 @@ header {
   .logo {
     font-family: $ff-semibold;
   }
+
+  .mobile-nav-toggle {
+    display: none;
+    
+    .icon-menu {
+      transform: scaleX(-1);
+    }
+  }
+
+
+}
+
+@media (max-width: 50em) {
+  header {
+    #primary-navigation {
+      display: flex;
+      transition: right 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: fixed;
+      // inset: 0 0 0 45%;
+      height: 100vh;
+      top: 0;
+      right: -32.5rem;
+      padding-top: 5rem;
+      padding-right: 4.3125rem;
+      padding-left: 4.313rem;
+      background-color: color.$neutral-800;
+      z-index: 8;
+      border: 2px solid color.$neutral-200;
+
+      &[data-visible="true"] {
+        right: 0;
+      }
+
+      a {
+        font-size: 1.7em;
+        margin: .7em 0;
+      }
+    }
+
+    .button {
+      display: none;
+    }
+
+    .mobile-nav-toggle {
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      padding: 0.5em;
+      display: block;
+      z-index: 9;
+
+  
+      .icon-menu {
+        height: .875rem;
+      }
+  
+      .icon-close {
+        height: 1.25em;
+        translate: translate(5px, -5px);
+        -webkit-transform: translate(5px, -5px); /* Safari & Chrome */
+        -moz-transform: translate(5px, -5px); /* Firefox */
+        -ms-transform: translate(5px, -5px); /* Internet Explorer */
+        -o-transform: translate(5px, -5px); 
+      }
+    }
+  }
+
+  
 }
 
 
