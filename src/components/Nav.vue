@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Language from "./Language.vue";
 import { ref } from "vue";
 import { defineEmits } from "vue";
 const emit = defineEmits(["pressed"]);
@@ -39,15 +40,17 @@ function toggleMenu() {
       />
       <span class="visually-hidden">Menu</span>
     </button>
-    <nav class="fs-300" id="primary-navigation" :data-visible="menuVisibility">
-      <a href="#">About</a>
-      <a href="#">Experience</a>
-      <a href="#">Work</a>
-      <a href="#">Contact</a>
-    </nav>
+    <div class="navigation-wrapper" :data-visible="menuVisibility">
+      <nav class="fs-300" id="primary-navigation">
+        <a href="#">About</a>
+        <a href="#">Experience</a>
+        <a href="#">Work</a>
+        <a href="#">Contact</a>
 
-    <div class="button">
-      <a href="#">EN</a>
+        <Language class="mobile" />
+      </nav>
     </div>
+
+    <!-- <Language class="dekstop" /> -->
   </header>
 </template>

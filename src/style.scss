@@ -39,9 +39,40 @@ a {
 } 
 
 .button {
+  background-color: color.$neutral-800;
+  color: color.$neutral-200;
   border:  1px solid color.$neutral-200;
   border-radius: 25px;
   padding: 1.25rem 1.5625rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  &:hover {
+    .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  // padding-top: 3.2rem;
+  min-height: 6.25rem;
+  // transform: translateY(-2.5rem);
+  // width: 4.8125rem;
+  z-index: 1;
+
+  &:hover {
+    display: block;
+  }
+
+  a {
+    display: block;
+  }
 }
 
 
@@ -74,8 +105,11 @@ header {
 @media (max-width: 50em) {
   * {
     transition: filter 0.1s ease-in-out;
-    
   }
+  .desktop {
+    display: none;
+  }
+
   .blur {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
@@ -85,26 +119,19 @@ header {
 }
 
   header {
-    #primary-navigation {
-      display: flex;
-      transition: right 0.3s ease-in-out;
-      flex-direction: column;
-      align-items: flex-end;
+    .navigation-wrapper {
       position: fixed;
+      transition: right 0.3s ease-in-out;
       // inset: 0 0 0 45%;
       height: 100vh;
       top: 0;
       right: -32.5rem;
-      padding-top: 5rem;
-      padding-right: 4.3125rem;
-      padding-left: 4.313rem;
-      background-color: color.$neutral-800;
       z-index: 8;
+      background-color: #28282c;
       border-width: 2px;
       border-style: solid;
       -webkit-border-image: linear-gradient(to right bottom, color.$primary, color.$secondary) 1;
       border-image: linear-gradient(to right bottom, color.$primary, color.$secondary) 1;
-
 
       &[data-visible="true"] {
         right: 0;
@@ -114,6 +141,16 @@ header {
         font-size: 1.7em;
         margin: .7em 0;
       }
+    } 
+
+    #primary-navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-top: 5rem;
+      padding-right: 4.3125rem;
+      padding-left: 4.313rem;
+     
     }
 
     .button {
