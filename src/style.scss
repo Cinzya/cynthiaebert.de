@@ -1,20 +1,16 @@
-$ff-primary: 'GeneralSans' , "General Sans", sans-serif;
-
-$ff-body: 'GeneralSans-Regular', "General Sans Regular", sans-serif;
-$ff-heading: 'GeneralSans-Bold', "General Sans Bold", sans-serif;
-$ff-semibold: 'GeneralSans-SemiBold', "General Sans SemiBold", sans-serif;
-
-
 @forward "./sass/reset.scss";
 @forward "./sass/fonts/css/general-sans.css";
 @forward "./sass/sizing.scss";
 @forward "./sass/colors.scss";
 @forward "./sass/layout.scss";
+@forward "./sass/typography.scss";
 
+@use "./sass/typography.scss" as typography;
 @use "./sass/colors.scss" as color;
+@use "./sass/layout.scss" as layout;
 
 :root {
-  font-family: $ff-primary, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: typography.$ff-primary, Inter, Avenir, Helvetica, Arial, sans-serif;
   // font-size: 16px;
   // line-height: 24px;
   // font-weight: 400;
@@ -30,7 +26,7 @@ $ff-semibold: 'GeneralSans-SemiBold', "General Sans SemiBold", sans-serif;
 }
 
 b {
-  font-family: $ff-heading;
+  font-family: typography.$ff-heading;
 }
 
 
@@ -118,8 +114,14 @@ a {
 // Header
 
 header {
-  padding-top: 1.875rem;
+  padding: 1.875rem layout.$container layout.$container;
   background-color: color.$neutral-800-transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+
+
   nav {
     a {
       margin: 0 .7813rem;
@@ -127,7 +129,7 @@ header {
   }
 
   .logo {
-    font-family: $ff-semibold;
+    font-family: typography.$ff-semibold;
   }
 
   .mobile-nav-toggle {
@@ -137,8 +139,26 @@ header {
       transform: scaleX(-1);
     }
   }
-
 }
+
+// Hero image
+
+.hero {
+  height: 100vh;
+
+  .name {
+    background: -webkit-linear-gradient(left, color.$primary, color.$secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    max-width: 70ch;
+  }
+}
+
+
+
 
 @media (max-width: 50em) {
   * {

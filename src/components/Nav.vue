@@ -14,7 +14,7 @@ function toggleMenu() {
 </script>
 
 <template>
-  <header class="container flex justify-between">
+  <header class="flex justify-between">
     <span class="logo fs-400">Cynthia Ebert</span>
 
     <button
