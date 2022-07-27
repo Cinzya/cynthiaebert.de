@@ -33,11 +33,49 @@ b {
   font-family: $ff-heading;
 }
 
+
+// Links
+
 a {
-  color: inherit; /* blue colors for links too */
+  color: inherit;
   text-decoration: inherit; /* no underline */
+  transition: all .3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    color: color.$neutral-100;
+    &::after {
+      background: linear-gradient(270deg,color.$secondary,color.$primary);
+
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+    background: linear-gradient(270deg,color.$primary,color.$secondary);
+  }
 } 
 
+.neutral-link {
+  &::after {
+    width: 0;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// Buttons
 .button {
   background-color: color.$neutral-800;
   color: color.$neutral-200;
@@ -46,6 +84,7 @@ a {
   padding: 1.25rem 1.5625rem;
 }
 
+// Forms
 .dropdown {
   position: relative;
   display: inline-block;
@@ -99,7 +138,6 @@ header {
     }
   }
 
-
 }
 
 @media (max-width: 50em) {
@@ -128,8 +166,7 @@ header {
       right: -32.5rem;
       z-index: 8;
       background-color: #28282c;
-      border-width: 2px;
-      border-style: solid;
+      // border-left: 2px solid color.$neutral-200;
       -webkit-border-image: linear-gradient(to right bottom, color.$primary, color.$secondary) 1;
       border-image: linear-gradient(to right bottom, color.$primary, color.$secondary) 1;
 

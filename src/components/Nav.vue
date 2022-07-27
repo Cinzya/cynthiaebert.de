@@ -42,15 +42,15 @@ function toggleMenu() {
     </button>
     <div class="navigation-wrapper" :data-visible="menuVisibility">
       <nav class="fs-300" id="primary-navigation">
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="#">Work</a>
-        <a href="#">Contact</a>
+        <a class="neutral-link" href="#">About</a>
+        <a class="neutral-link" href="#">Experience</a>
+        <a class="neutral-link" href="#">Work</a>
+        <a class="neutral-link" href="#">Contact</a>
 
         <Language class="mobile" />
       </nav>
     </div>
 
-    <!-- <Language class="dekstop" /> -->
+    <Language class="desktop" />
   </header>
 </template>

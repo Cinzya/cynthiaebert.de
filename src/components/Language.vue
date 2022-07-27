@@ -13,9 +13,13 @@ const selected = ref("en");
       {{ selected.toUpperCase() }}
     </button>
     <div class="button dropdown-content">
-      <a v-for="lang in options.languages" v-bind:key="lang" href="#">{{
-        lang.toUpperCase()
-      }}</a>
+      <a
+        v-for="lang in options.languages"
+        v-bind:key="lang"
+        class="neutral-link"
+        href="#"
+        >{{ lang.toUpperCase() }}</a
+      >
     </div>
   </div>
 </template>
