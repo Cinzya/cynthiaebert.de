@@ -46,9 +46,8 @@ function toggleMenu() {
         <a class="neutral-link" href="#">Experience</a>
         <a class="neutral-link" href="#">Work</a>
         <a class="neutral-link" href="#">Contact</a>
-
-        <Language class="mobile" />
       </nav>
+      <Language class="mobile" />
     </div>
 
     <Language class="desktop" />

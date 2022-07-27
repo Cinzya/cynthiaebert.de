@@ -91,7 +91,7 @@ a {
   
   &:hover {
     .dropdown-content {
-      display: block;
+      display: flex;
     }
   }
 }
@@ -159,6 +159,9 @@ header {
   header {
     .navigation-wrapper {
       position: fixed;
+      // display: flex;
+      // justify-content: space-between;
+      // flex-direction: column;
       transition: right 0.3s ease-in-out;
       // inset: 0 0 0 45%;
       height: 100vh;
@@ -184,9 +187,8 @@ header {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-top: 5rem;
-      padding-right: 4.3125rem;
-      padding-left: 4.313rem;
+      padding: 7rem 4.3125rem 3rem 4.3125rem;
+
      
     }
 
@@ -218,6 +220,21 @@ header {
     }
   }
 
+  .dropdown.mobile {
+    display: block;
+
+    .button:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: end;
+      padding-right: 4.3125rem;
+      border: none;
+      gap: 1.25rem;
+      background-color: inherit;
+
+    }
+  } 
   
 }
 
