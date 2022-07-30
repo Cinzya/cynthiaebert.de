@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import Language from "./Language.vue";
 import { ref, defineEmits } from "vue";
+import { onClickOutside } from "@vueuse/core";
 const emit = defineEmits(["pressed"]);
 
+const menu = ref();
 const menuState = ref(false);
 const menuVisibility = ref();
 function toggleMenu() {
@@ -10,10 +12,16 @@ function toggleMenu() {
   menuVisibility.value = menuState.value;
   emit("pressed");
 }
+
+onClickOutside(menu, () => {
+  if (menuState.value) {
+    toggleMenu();
+  }
+});
 </script>
 
 <template>
-  <header class="flex justify-between">
+  <header ref="menu" class="flex justify-between">
     <span class="logo fs-400">Cynthia Ebert</span>
 
     <button
