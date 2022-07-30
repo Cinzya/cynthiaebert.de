@@ -1,16 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const hover = ref(false);
+</script>
 <template>
   <main class="grid">
     <div
       class="hero container flex flex-row align-center col-start-3 col-end-11"
     >
       <h1>
-        <span class="block fs-500">Hi, my name is</span>
+        <span class="block fs-500 mb-600">Hi, my name is</span>
         <span class="inline-block fs-900 ff-bold lh-12 name"
           >Cynthia Ebert</span
         >
-        <span class="block fs-900 ff-bold lh-12 punchline"
-          >building things for the web.</span
+        <span class="block fs-900 ff-bold lh-12 punchline mb-600"
+          >building things for <span v-if="!hover">the web</span
+          ><span v-if="hover">for you</span>.</span
         >
         <p class="fs-500">
           I'm a German web developer and (sometimes) web designer based in

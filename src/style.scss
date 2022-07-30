@@ -114,13 +114,17 @@ a {
 // Header
 
 header {
-  padding: 1.875rem layout.$container layout.$container;
+  padding: 1.875rem layout.$container 1.875rem layout.$container;
   background-color: color.$neutral-800-transparent;
   position: fixed;
   top: 0;
   width: 100%;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   z-index: 1000;
+
+  &.hidden {
+    top: -100%;
+  }
 
 
   nav {
@@ -145,7 +149,7 @@ header {
 // Hero image
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
 
   .name {
     background: -webkit-linear-gradient(left, color.$primary, color.$secondary);
@@ -154,7 +158,7 @@ header {
   }
 
   p {
-    max-width: 70ch;
+    max-width: 60ch;
   }
 }
 
@@ -178,6 +182,13 @@ header {
 }
 
   header {
+    transform: translate3d(0, 0, 0);
+    transition: 0.1s all ease-out;
+
+    &.navbar--hidden {
+      transform: translate3d(0, -100%, 0);
+    }
+    
     .navigation-wrapper {
       position: fixed;
       // display: flex;
@@ -228,6 +239,7 @@ header {
   
       .icon-menu {
         height: .875rem;
+        margin-bottom: .375rem;
       }
   
       .icon-close {

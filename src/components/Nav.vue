@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Language from "./Language.vue";
-import { ref } from "vue";
-import { defineEmits } from "vue";
+import { ref, defineEmits } from "vue";
 const emit = defineEmits(["pressed"]);
 
 const menuState = ref(false);

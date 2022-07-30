@@ -7,6 +7,17 @@ $fs-300: .8125rem;
 
 $my-300: 4.3125rem;
 
+$mb-700: 1.875rem;
+$mb-600: 1.25rem;
+
+.mb-700 {
+  margin-bottom: $mb-700;
+}
+
+.mb-600 {
+  margin-bottom: $mb-600;
+}
+
 .fs-900 {
   font-size: $fs-900;
 }

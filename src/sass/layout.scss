@@ -1,5 +1,6 @@
 $container: 4.375rem;
 $gutter: 1.875rem;
+$container-mobile: 1.5625rem;
 
 // Grid system
 .grid {
@@ -179,9 +180,15 @@ $gutter: 1.875rem;
     display: inline-block;
 }
 
+
 @media (min-width: 50em) {
     .mobile {
         display: none !important;
+    }
+
+    .grid {
+        margin-left: $container-mobile;
+        margin-right: $container-mobile;
     }
 }
 
