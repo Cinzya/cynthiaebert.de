@@ -180,15 +180,34 @@ $container-mobile: 1.5625rem;
     display: inline-block;
 }
 
-
 @media (min-width: 50em) {
     .mobile {
         display: none !important;
     }
+    
+}
+
+@media (max-width: 50em) {
 
     .grid {
         margin-left: $container-mobile;
         margin-right: $container-mobile;
+    }
+
+    .col-start-2 {
+        grid-column-start: 1;
+    }
+    
+    .col-start-3 {
+        grid-column-start: 1;
+    }
+
+    .col-end-11 {
+        grid-column-end: 13;
+    }
+    
+    .col-end-12 {
+        grid-column-end: 13;
     }
 }
 
