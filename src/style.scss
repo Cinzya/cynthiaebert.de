@@ -123,7 +123,7 @@ header {
   z-index: 1000;
 
   &.hidden {
-    top: -100%;
+    top: -6.25rem;
   }
 
 
@@ -183,12 +183,6 @@ header {
 
   header {
     padding: 1.875rem layout.$container-mobile 1.875rem layout.$container-mobile;
-    transform: translate3d(0, 0, 0);
-    transition: 0.1s all ease-out;
-
-    &.navbar--hidden {
-      transform: translate3d(0, -100%, 0);
-    }
     
     .navigation-wrapper {
       position: fixed;

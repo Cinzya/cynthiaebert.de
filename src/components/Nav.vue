@@ -2,6 +2,7 @@
 import Language from "./Language.vue";
 import { ref, defineEmits } from "vue";
 import { onClickOutside } from "@vueuse/core";
+
 const emit = defineEmits(["pressed"]);
 
 const menu = ref();

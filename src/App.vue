@@ -22,6 +22,7 @@ function onScroll() {
     // Here we determine whether we need to show or hide the navbar
     showNavbar.value = currentScrollPosition < lastScrollPosition.value;
   }
+
   // Set the current scroll position as the last scroll position
   lastScrollPosition.value = currentScrollPosition;
 }
@@ -40,10 +41,7 @@ function toggleBgBehaviour() {
 }
 </script>
 <template>
-  <Navigation
-    @pressed="toggleBgBehaviour"
-    :class="{ 'navbar--hidden': !showNavbar }"
-  />
+  <Navigation @pressed="toggleBgBehaviour" :class="{ hidden: !showNavbar }" />
   <Home v-scroll-lock="isLocked" :class="{ blur: isBlurred }" />
 </template>
 
