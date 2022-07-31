@@ -9,10 +9,16 @@ const selected = ref("en");
 
 <template>
   <div class="dropdown">
-    <button class="button" :aria-haspopup="true" :aria-expanded="true">
+    <button
+      class="button btn-neutral"
+      :aria-haspopup="true"
+      :aria-expanded="true"
+    >
       {{ selected.toUpperCase() }}
     </button>
-    <div class="button dropdown-content flex-column justify-between">
+    <div
+      class="button btn-neutral dropdown-content flex-column justify-between"
+    >
       <a
         v-for="lang in options.languages"
         v-bind:key="lang"

@@ -75,9 +75,61 @@ a {
 .button {
   background-color: color.$neutral-800;
   color: color.$neutral-200;
-  border:  1px solid color.$neutral-200;
+  border:  2px solid transparent;
   border-radius: 25px;
   padding: 1.25rem 1.5625rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -3px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: color.$neutral-200;
+  }
+  &::after {
+    border: none;
+    width: 0;
+    background: default;
+  }
+
+  
+
+  &:hover {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -3px; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(320deg,color.$secondary,color.$primary);
+    } 
+    &::after {
+      width: 0;
+    }
+  }
+}
+
+.btn-neutral {
+  border:  1px solid color.$neutral-200;
+
+  &::before {
+    background: none;
+    z-index: initial;
+    background: none;
+  }
+
+  &:hover {
+    &::before {
+      background: none;
+      z-index: initial;
+      background: none;
+    }
+  }
 }
 
 // Forms
@@ -119,6 +171,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  max-height: 7.875rem;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   z-index: 1000;
 
@@ -151,6 +204,7 @@ header {
 .hero {
   min-height: 100vh;
   padding: 6.25rem 0;
+
 
   .name {
     background: -webkit-linear-gradient(left, color.$primary, color.$secondary);
@@ -264,6 +318,7 @@ header {
 
     }
   } 
+  
   
 }
 

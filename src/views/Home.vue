@@ -5,8 +5,8 @@ const hover = ref(false);
 </script>
 <template>
   <main class="grid">
-    <div
-      class="hero container flex flex-row align-center col-start-3 col-end-11"
+    <section
+      class="hero container flex flex-column align-start justify-center col-start-3 col-end-11"
     >
       <h1>
         <span class="block fs-500 mb-600">Hi, my name is</span>
@@ -17,12 +17,13 @@ const hover = ref(false);
           >building things for <span v-if="!hover">the web</span
           ><span v-if="hover">for you</span>.</span
         >
-        <p class="fs-500">
+        <p class="fs-500 mb-850">
           I'm a German web developer and (sometimes) web designer based in
           Eindhoven, the Netherlands. Currently looking for a job to expand my
           skillset and tackle new challanges.
         </p>
       </h1>
-    </div>
+      <a href="" class="button block">Check out my resume!</a>
+    </section>
   </main>
 </template>
