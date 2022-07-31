@@ -13,11 +13,13 @@ $ff-semibold: 'GeneralSans-SemiBold', "General Sans SemiBold", sans-serif;
 }
 
 .ff-bold {
-  font-family: $ff-heading;
+  font-family: $ff-primary;
+  font-weight: bold;
 }
 
 .ff-semibold {
-  font-family: $ff-semibold;
+  font-family: $ff-primary;
+  font-weight: 600;
 }
 
 .lh-12 {
