@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const hover = ref(false);
+const isFlipped = ref(false);
+function toggleFlip() {
+  isFlipped.value = !isFlipped.value;
+}
 </script>
 <template>
   <main class="grid">
@@ -13,10 +16,16 @@ const hover = ref(false);
         <span class="inline-block fs-900 ff-bold lh-12 name"
           >Cynthia Ebert</span
         >
-        <span class="block fs-900 ff-bold lh-12 punchline mb-600"
-          >building things for <span v-if="!hover">the web</span
-          ><span v-if="hover">for you</span>.</span
-        >
+        <span class="block fs-900 ff-bold lh-12 punchline mb-600">
+          building things for
+          <div
+            class="flex-inline align-end rotate"
+            :class="{ 'is-flipped': isFlipped }"
+            @click="toggleFlip"
+          >
+            <span>the web.</span><span>you.</span>
+          </div>
+        </span>
         <p class="fs-500 mb-850">
           I'm a German web developer and (sometimes) web designer based in
           Eindhoven, the Netherlands. Currently looking for a job to expand my
