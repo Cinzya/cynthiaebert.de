@@ -4,9 +4,11 @@
 import Navigation from "./components/Nav.vue";
 import Home from "./views/Home.vue";
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import { vScrollLock } from "@vueuse/components";
 
 let showNavbar = ref(true);
 let lastScrollPosition = ref(0);
+const isLocked = ref(false);
 
 function onScroll() {
   // Get the current scroll position
@@ -16,8 +18,10 @@ function onScroll() {
   if (currentScrollPosition < 0) {
     return;
   }
-  // Here we determine whether we need to show or hide the navbar
-  showNavbar.value = currentScrollPosition < lastScrollPosition.value;
+  if (!isLocked.value) {
+    // Here we determine whether we need to show or hide the navbar
+    showNavbar.value = currentScrollPosition < lastScrollPosition.value;
+  }
   // Set the current scroll position as the last scroll position
   lastScrollPosition.value = currentScrollPosition;
 }
@@ -30,16 +34,17 @@ onBeforeUnmount(() => {
 });
 
 const isBlurred = ref(false);
-function toggleBlur() {
+function toggleBgBehaviour() {
   isBlurred.value = !isBlurred.value;
+  isLocked.value = !isLocked.value;
 }
 </script>
 <template>
   <Navigation
-    @pressed="toggleBlur"
+    @pressed="toggleBgBehaviour"
     :class="{ 'navbar--hidden': !showNavbar }"
   />
-  <Home :class="{ blur: isBlurred }" />
+  <Home v-scroll-lock="isLocked" :class="{ blur: isBlurred }" />
 </template>
 
 <style scoped></style>
