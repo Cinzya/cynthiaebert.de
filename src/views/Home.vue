@@ -1,10 +1,23 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useElementHover } from "@vueuse/core";
+
+const myHoverableElement = ref();
+const isHovered = useElementHover(myHoverableElement);
 
 const isFlipped = ref(false);
 function toggleFlip() {
   isFlipped.value = !isFlipped.value;
 }
+
+watch(isHovered, (newValue, oldValue) => {
+  if (newValue != oldValue && newValue == true) {
+    // execute togglFlip with a delay of a second
+    setTimeout(toggleFlip, 300);
+  } else {
+    toggleFlip();
+  }
+});
 </script>
 <template>
   <main class="grid">
@@ -19,9 +32,9 @@ function toggleFlip() {
         <span class="block fs-900 ff-bold lh-12 punchline mb-600">
           building things for
           <div
+            ref="myHoverableElement"
             class="flex-inline align-end rotate"
             :class="{ 'is-flipped': isFlipped }"
-            @click="toggleFlip"
           >
             <span>the web.</span><span>you.</span>
           </div>
