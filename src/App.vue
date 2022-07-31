@@ -18,6 +18,12 @@ function onScroll() {
   if (currentScrollPosition < 0) {
     return;
   }
+  // Stop executing this function if the difference between
+  // current scroll position and last scroll position is less than some offset
+  if (Math.abs(currentScrollPosition - lastScrollPosition.value) < 60) {
+    return;
+  }
+
   if (!isLocked.value) {
     // Here we determine whether we need to show or hide the navbar
     showNavbar.value = currentScrollPosition < lastScrollPosition.value;
