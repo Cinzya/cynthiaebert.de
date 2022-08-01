@@ -8,6 +8,7 @@
 @use "./sass/typography.scss" as typography;
 @use "./sass/colors.scss" as color;
 @use "./sass/layout.scss" as layout;
+@use "./sass/sizing.scss" as sizing;
 
 :root {
   font-family: typography.$ff-primary, Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -27,6 +28,34 @@
 
 b {
   font-family: typography.$ff-heading;
+}
+
+p {
+  margin-top: sizing.$mb-750;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 80%;
+    left: 0;
+    height: 1px;
+    border-radius: 2px;
+    background: linear-gradient(270deg,color.$secondary,color.$primary);
+  }
+  &.large {
+    &::after {
+      height: 3px;
+    }
+  }
 }
 
 
@@ -132,6 +161,7 @@ a {
   }
 }
 
+
 // Forms
 .dropdown {
   position: relative;
@@ -199,7 +229,7 @@ header {
   }
 }
 
-// Hero image
+// Hero
 
 .hero {
   min-height: 100vh;
@@ -216,13 +246,20 @@ header {
     max-width: 60ch;
   }
 
+  .punchline {
+    perspective: 5000px;
+
+  }
+
   .rotate {
     width: 265px;
-    height: 4.8rem;
+    height: 4rem;
     transition: transform .8s;
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    transform: translateY(.9375rem);
+
 
     &.is-flipped {
       transform: rotateX(180deg);
@@ -239,21 +276,17 @@ header {
       // font-size: 40px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
+      transform: rotateX(0deg);
+      // background: color.$neutral-800;
 
       &:nth-child(2) {
         transform: rotateX(180deg);
         background: -webkit-linear-gradient(left, color.$primary-alt, color.$secondary-alt);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
-  }
-
-}
-
-@media (min-width: 89.375rem) {
-  .rotate {
-    top: .9375rem;
   }
 }
 
