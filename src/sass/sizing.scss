@@ -7,9 +7,17 @@ $fs-300: .8125rem;
 
 $my-300: 4.3125rem;
 
+$s-1000: 6.25rem;
+
+$mb-950: 4.125rem;
 $mb-850: 3.4375rem;
+$mb-750: 2.25rem;
 $mb-700: 1.875rem;
 $mb-600: 1.25rem;
+
+.mb-950 {
+  margin-bottom: $mb-950;
+}
 
 .mb-850 {
   margin-bottom: $mb-850;

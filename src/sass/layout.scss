@@ -129,6 +129,10 @@ $container-mobile: 1.5625rem;
     flex-direction: row;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -196,6 +200,10 @@ $container-mobile: 1.5625rem;
 }
 
 @media (max-width: 50em) {
+
+    .flex-row {
+        flex-direction: column;
+    }
 
     .grid {
         margin-left: $container-mobile;
