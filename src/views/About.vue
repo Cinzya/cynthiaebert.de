@@ -3,11 +3,11 @@
   <section class="about container flex flex-row col-start-3 col-end-11">
     <div class="">
       <h2 class="underline large fs-700 ff-bold mb-950">About me</h2>
-      <p class="fs-500">
+      <!-- <p class="fs-500">
         I'm passionate about bringing both the technical and visual aspects of
         digital products to life. User experience, beautiful pixels and writing
         clean accessible, human code matters to me.
-      </p>
+      </p> -->
       <p class="fs-500">
         I recently graduated from
         <a href="">Ansbach University of Applied Science</a> after completing

@@ -66,6 +66,7 @@ a {
   text-decoration: inherit; /* no underline */
   transition: all .3s ease-in-out;
   position: relative;
+  white-space: nowrap;
 
   &:hover {
     color: color.$neutral-100;
@@ -405,11 +406,22 @@ header {
   }
   
   .about {
-    ul {
-      height: auto !important;
-      margin-bottom: sizing.$mb-850 !important;
+    div:first-child {
+      min-width: 100%;
+      margin-right: 0;
+      ul {
+        height: auto !important;
+        margin-bottom: sizing.$mb-850 !important;
+      }
     }
 
+    div:nth-child(2) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 21.875rem;
+      height: auto;
+    }
     img {
       width: 100%;
       height: auto;

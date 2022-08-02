@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Hero from "../components/Hero.vue";
-import About from "../components/About.vue";
+import About from "./About.vue";
 </script>
 <template>
   <main class="grid">
