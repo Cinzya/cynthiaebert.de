@@ -33,7 +33,7 @@ watch(isHovered, (newValue, oldValue) => {
           class="flex-inline align-end rotate"
           :class="{ 'is-flipped': isFlipped }"
         >
-          <span>the web.</span><span>you.</span>
+          <span>the web.</span><span>you!</span>
         </div>
       </span>
       <p class="fs-500 mb-850">

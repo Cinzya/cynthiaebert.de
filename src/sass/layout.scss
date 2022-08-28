@@ -11,6 +11,12 @@ $container-mobile: 1.5625rem;
     margin-right: $container;
 }
 
+.inner-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: $gutter;
+}
+
 .col-start-1 {
     grid-column-start: 1;
 }
@@ -111,6 +117,14 @@ $container-mobile: 1.5625rem;
     grid-column-end: 13;
 }
 
+.col-7 {
+    width: 87.09%;
+}
+
+.col-4 {
+    width: 48.72%;
+}
+
 // Flexbox
 
 .flex {
@@ -190,6 +204,18 @@ $container-mobile: 1.5625rem;
 
 .inline {
     display: inline;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.right {
+    float: right;
 }
 
 @media (min-width: 50em) {

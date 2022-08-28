@@ -14,6 +14,7 @@ $mb-850: 3.4375rem;
 $mb-750: 2.25rem;
 $mb-700: 1.875rem;
 $mb-600: 1.25rem;
+$mb-500: 1rem;
 
 .mb-950 {
   margin-bottom: $mb-950;
@@ -27,8 +28,10 @@ $mb-600: 1.25rem;
   margin-bottom: $mb-700;
 }
 
-.mb-600 {
-  margin-bottom: $mb-600;
+
+
+.mb-500 {
+  margin-bottom: $mb-500;
 }
 
 .fs-900 {
