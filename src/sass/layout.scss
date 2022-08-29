@@ -14,7 +14,20 @@ $container-mobile: 1.5625rem;
 .inner-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: $gutter;
+    grid-template-rows: min-content autofit(4, auto);
+    column-gap: $gutter;
+}
+
+.row-start-1 {
+    grid-row-start: 1;
+}
+
+.row-start-2 {
+    grid-row-start: 2;
+}
+
+.row-start-3 {
+    grid-row-start: 3;
 }
 
 .col-start-1 {
@@ -117,6 +130,30 @@ $container-mobile: 1.5625rem;
     grid-column-end: 13;
 }
 
+.row-end-1 {
+    grid-row-end: 1;
+}
+
+.row-end-2 {
+    grid-row-end: 2;
+}
+
+.row-end-3 {
+    grid-row-end: 3;
+}
+
+.row-end-4 {
+    grid-row-end: 4;
+}
+
+.row-end-5 {
+    grid-row-end: 5;
+}
+
+.row-end-6 {
+    grid-row-end: 6;
+}
+
 .col-7 {
     width: 87.09%;
 }
@@ -216,6 +253,17 @@ $container-mobile: 1.5625rem;
 
 .right {
     float: right;
+}
+
+
+@media (max-width: 87.5em) {
+    .col-start-5 {
+        grid-column-start: 3 !important;
+    }
+
+    .col-end-5 {
+        grid-column-end: 3 !important;
+    }
 }
 
 @media (min-width: 50em) {

@@ -172,8 +172,9 @@ $button-padding-y: 1.5625rem;
   }
 }
 
+$text-shadow: 0 3px 6px rgba(0,0,0,0.16);
 .text-shadow {
-  text-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  text-shadow: $text-shadow;
 }
 
 // Forms
@@ -329,33 +330,35 @@ header {
 }
 
 .projects {
-  article {
-    .infobox {
-      top: 68%;
-      right: 0;
-      width: 100%;
+  article {x
 
       img {
         width: 100%;
-        height: 100%;
         object-fit: cover;
       }
 
+      h3 {
+        text-align: right;
+      }
+
       .textbox {
-        width: 48.72%;
-        min-height: 13.4375rem;
-        padding: 1.25rem 1.5625rem;
+        // width: 48.72%;
+        // min-height: 13.4375rem;
+        height: max-content;
+        padding: 1.5625rem;
         background-color: color.$neutral-700;
+         p {
+          text-align: right;
+         }
       }
     }
 
     .technologies {
-      margin-right: 51.28%;
+      // margin-right: 51.28%;
       span {
         margin-left: .625rem;
         float: right
       }
-    }
   }
 }
 
@@ -487,53 +490,66 @@ header {
   .projects {
     article {
       img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-      .infobox {
-        display: block;
-        position: initial;
-        top: 0;
-        left: 0;
-        width: 100%;
+        grid-column-end: 9;
+        grid-row-end: 6;
         height: 100%;
-        // height: calc(100% - (sizing.$mb-500 + sizing.$fs-300));
-        padding-left: $button-padding-x;
-        padding-right: $button-padding-x;
-        padding-top: $button-padding-y;
-        background-color: rgba(63, 63, 67, 0.5);
-        .textbox {
-          width: 100%;
-          min-height: auto;
-          background-color: transparent;
-          padding: 0;
+        width: 100%;
+      }
+
+      .textbox, h3, .technologies {
+        grid-column-start: 1 !important;
+        grid-column-end: 9 !important;
+        text-align: left;
+        background-color: rgba(29, 29, 32, 0.8);
+      }
+
+      $m-p-1: 1.875rem;
+      $m-p-2: 2.5rem;
+      h3 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-shadow: none;
+        padding: $m-p-1 $m-p-2 1rem $m-p-2;
+        margin: 0;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        // padding: 1.875rem 2.5rem 0 1.875rem;
+        // padding: $button-padding-x $button-padding-y 0 $button-padding-y;
+      }
+
+      .textbox {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border-radius: initial;
+        padding: 1.25rem $m-p-2 1.25rem $m-p-2;
+        // padding: 0 2.5rem 0 2.5rem;
+        // padding: 0 $button-padding-y 0 $button-padding-y;
+
+        p {
+          text-align: left;
         }
       }
       .technologies {
-        // position: absolute;
-        top: 0;
-        left: 0;
-        margin-right: 0;
-        display: block;
-        background-color: rgba(63, 63, 67, 0.5);
-        padding-left: $button-padding-x;
-        padding-right: $button-padding-x;
-        padding-bottom: $button-padding-y;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 1rem $m-p-2 $m-p-1 $m-p-2;
+        // padding: 1rem 2.5rem 1.875rem 2.5rem;
+        // padding: 1rem $button-padding-y $button-padding-x $button-padding-y;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+
         span {
-          margin-left: 0;
-          margin-right: .625rem;
-          float: none;
+          text-align: left;
+          float: initial;
+
+          &:nth-child(1) {
+            margin-left: 0;
+          }
         }
       }
     }
   }
-  
-  
-  
 }
 
 
