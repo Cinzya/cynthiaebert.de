@@ -5,5 +5,6 @@ import Project from "./Project.vue";
   <section class="projects container flex flex-column col-start-3 col-end-11">
     <h2 class="underline large fs-700 ff-bold mb-950">The Things I've Built</h2>
     <Project />
+    <Project class="right" />
   </section>
 </template>

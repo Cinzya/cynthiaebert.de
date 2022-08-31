@@ -14,7 +14,7 @@ $container-mobile: 1.5625rem;
 .inner-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: min-content autofit(4, auto);
+    grid-template-rows: autofit(4, min-content);
     column-gap: $gutter;
 }
 
@@ -257,13 +257,13 @@ $container-mobile: 1.5625rem;
 
 
 @media (max-width: 87.5em) {
-    .col-start-5 {
-        grid-column-start: 3 !important;
-    }
+    // .col-start-5 {
+    //     grid-column-start: 3 !important;
+    // }
 
-    .col-end-5 {
-        grid-column-end: 3 !important;
-    }
+    // .col-end-5 {
+    //     grid-column-end: 3 !important;
+    // }
 }
 
 @media (min-width: 50em) {

@@ -330,7 +330,7 @@ header {
 }
 
 .projects {
-  article {x
+  article {
 
       img {
         width: 100%;
@@ -354,14 +354,77 @@ header {
     }
 
     .technologies {
-      // margin-right: 51.28%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+
       span {
         margin-left: .625rem;
-        float: right
       }
+  }
+
+  .project.right {
+    img {
+      grid-column-start: 2;
+      grid-column-end: 9;
+    }
+    h3, p, span {
+      text-align: left;
+    }
+    h3 {
+      grid-column-start: 1;
+      grid-column-end: 8;
+    }
+    .textbox {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    .technologies {
+      grid-column-start: 5;
+      grid-column-end: 9;
+      justify-content: start;
+      span {
+        margin-left: 0;
+        margin-right: .625rem;
+      }
+    }
   }
 }
 
+// Tablet / Small Desktop
+@media (max-width: 87.5em) {
+  .project {
+    h3, .textbox {
+      grid-column-start: 3;
+    }
+    .technologies {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  .project.right {
+    .textbox {
+      grid-column-start: 1;
+      grid-column-end: 7 !important;
+    }
+    h3 {
+      grid-column-start: 1 !important;
+      grid-column-end: 8 !important;
+    }
+    .technologies {
+      grid-column-start: 7 !important;
+      grid-column-end: 9 !important;
+      span {
+        float: left;
+      }
+    }
+
+  } 
+}
+
+
+// Mobile
 @media (max-width: 50em) {
   * {
     transition: filter 0.1s ease-in-out;
@@ -489,6 +552,8 @@ header {
   
   .projects {
     article {
+      margin-bottom: sizing.$mb-850;
+      
       img {
         grid-column-end: 9;
         grid-row-end: 6;
@@ -499,8 +564,11 @@ header {
       .textbox, h3, .technologies {
         grid-column-start: 1 !important;
         grid-column-end: 9 !important;
-        text-align: left;
         background-color: rgba(29, 29, 32, 0.8);
+      }
+
+      h3, .textbox p, .technologies {
+        text-align: left;
       }
 
       $m-p-1: 1.875rem;
@@ -524,10 +592,6 @@ header {
         padding: 1.25rem $m-p-2 1.25rem $m-p-2;
         // padding: 0 2.5rem 0 2.5rem;
         // padding: 0 $button-padding-y 0 $button-padding-y;
-
-        p {
-          text-align: left;
-        }
       }
       .technologies {
         grid-row-start: 3;
@@ -537,16 +601,15 @@ header {
         // padding: 1rem $button-padding-y $button-padding-x $button-padding-y;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
+        justify-content: start;
 
+      }
+    }
 
-        span {
-          text-align: left;
-          float: initial;
-
-          &:nth-child(1) {
-            margin-left: 0;
-          }
-        }
+    .project.right {
+      h3, .textbox, .technologies, img {
+        grid-column-start: 1 !important;
+        grid-column-end: 9 !important;
       }
     }
   }
