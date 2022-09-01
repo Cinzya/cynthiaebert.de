@@ -49,7 +49,7 @@ onClickOutside(menu, () => {
       <span class="visually-hidden">Menu</span>
     </button>
     <div class="navigation-wrapper" :data-visible="menuVisibility">
-      <nav class="fs-300" id="primary-navigation">
+      <nav class="fs-400" id="primary-navigation">
         <a class="neutral-link" href="#">About</a>
         <a class="neutral-link" href="#">Experience</a>
         <a class="neutral-link" href="#">Work</a>

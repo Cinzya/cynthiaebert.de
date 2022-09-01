@@ -9,7 +9,7 @@ $my-300: 4.3125rem;
 
 $s-1000: 6.25rem;
 
-$mb-950: 4.375rem;
+$mb-950: 3.75rem;
 $mb-850: 3.4375rem;
 $mb-750: 2.25rem;
 $mb-700: 1.875rem;
@@ -28,7 +28,13 @@ $mb-500: 1rem;
   margin-bottom: $mb-700;
 }
 
+.mt-750 {
+  margin-top: $mb-750;
+}
 
+.mb-600 {
+  margin-bottom: $mb-600;
+}
 
 .mb-500 {
   margin-bottom: $mb-500;
@@ -56,4 +62,26 @@ $mb-500: 1rem;
 
 .fs-300 {
   font-size: $fs-300;
+}
+
+@media (max-width: 50em) {
+  .fs-400 {
+    font-size: .875rem;
+  }
+
+  .fs-500 {
+    font-size: 1.125rem;
+  }
+
+  .fs-700 {
+    font-size: 1.625rem;
+  }
+
+  .fs-600 {
+    font-size: 1.4375rem;
+  }
+
+  .fs-900 {
+    font-size: 2.625rem;
+  }
 }

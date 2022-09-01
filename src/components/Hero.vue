@@ -42,6 +42,6 @@ watch(isHovered, (newValue, oldValue) => {
         skillset and tackle new challanges.
       </p>
     </h1>
-    <a href="" class="button block">Check out my resume!</a>
+    <a href="" class="button block fs-400">Check out my resume!</a>
   </section>
 </template>

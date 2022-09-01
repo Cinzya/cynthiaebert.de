@@ -285,19 +285,19 @@ $container-mobile: 1.5625rem;
     }
 
     .col-start-2 {
-        grid-column-start: 1;
+        grid-column-start: 1 !important;
     }
     
     .col-start-3 {
-        grid-column-start: 1;
+        grid-column-start: 1 !important;
     }
 
     .col-end-11 {
-        grid-column-end: 13;
+        grid-column-end: 13 !important;
     }
     
     .col-end-12 {
-        grid-column-end: 13;
+        grid-column-end: 13 !important;
     }
 }
 
