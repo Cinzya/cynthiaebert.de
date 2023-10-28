@@ -301,3 +301,9 @@ $container-mobile: 1.5625rem;
     }
 }
 
+
+@media (max-width: 23.75em) {
+    .grid {
+        column-gap: 0;
+    }
+}

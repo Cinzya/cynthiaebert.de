@@ -80,7 +80,8 @@ a {
   &::after {
     content: "";
     position: absolute;
-    top: 100%;
+    // top: 100%;
+    bottom: -4px;
     width: 100%;
     left: 0;
     height: 1px;
@@ -92,6 +93,7 @@ a {
 
 section {
   padding: sizing.$s-1000 0;
+  // max-width: 100%;
 }
 
 .neutral-link {
@@ -127,7 +129,7 @@ $button-padding-y: 1.5625rem;
     z-index: -1;
     margin: -3px; /* !importanté */
     border-radius: inherit; /* !importanté */
-    background: color.$neutral-200;
+    background: linear-gradient(320deg,color.$secondary,color.$primary);
   }
   &::after {
     border: none;
@@ -147,7 +149,7 @@ $button-padding-y: 1.5625rem;
       z-index: -1;
       margin: -3px; /* !importanté */
       border-radius: inherit; /* !importanté */
-      background: linear-gradient(320deg,color.$secondary,color.$primary);
+      background: linear-gradient(320deg,color.$primary,color.$secondary);
     } 
     &::after {
       width: 0;

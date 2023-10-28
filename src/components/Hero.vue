@@ -25,9 +25,9 @@ watch(isHovered, (newValue, oldValue) => {
   >
     <h1>
       <span class="block fs-500 mb-600">Hi, my name is</span>
-      <span class="inline-block fs-900 ff-bold lh-12 name">Cynthia Ebert</span>
+      <span class="inline-block fs-900 ff-bold lh-12 name">Cynthia Ebert.</span>
       <span class="block fs-900 ff-bold lh-12 punchline mb-600">
-        building things for
+        Building things for
         <div
           ref="myHoverableElement"
           class="flex-inline align-end rotate"
@@ -36,12 +36,12 @@ watch(isHovered, (newValue, oldValue) => {
           <span>the web.</span><span>you!</span>
         </div>
       </span>
-      <p class="fs-500 mb-850">
+      <p class="fs-500 mb-950">
         I'm a German web developer and (sometimes) web designer based in
         Eindhoven, the Netherlands. Currently looking for a job to expand my
         skillset and tackle new challanges.
       </p>
     </h1>
-    <a href="" class="button block fs-400">Check out my resume!</a>
+    <a href="" class="button block fs-400 mt-750">Check out my resume!</a>
   </section>
 </template>

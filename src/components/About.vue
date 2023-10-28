@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <section class="about container flex flex-row col-start-3 col-end-11">
+  <section class="about container flex flex-row col-start-3 col-end-12">
     <div class="">
       <h2 class="underline large fs-700 ff-bold mb-950">About me</h2>
       <!-- <p class="fs-500">

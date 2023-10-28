@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <article class="project col-start-3 col-end-9 inner-grid mb-850">
+  <article class="project col-start-3 col-end-9 inner-grid mb-950">
     <img
       src="../assets/img/dummy_projectherodummy_projec.jpg"
       alt=""
